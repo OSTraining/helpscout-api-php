@@ -1,5 +1,5 @@
 {
-    "name": "helpscout/api",
+    "name": "ostraining/helpscout-api-php",
     "type": "library",
     "description": "API client for the Help Scout API",
     "keywords": ["api", "api-client", "helpscout"],
