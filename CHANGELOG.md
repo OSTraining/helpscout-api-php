@@ -1,3 +1,12 @@
+#### 1.8.3 (August 18, 2016)
+* Remove incorrect example of getting closed conversations
+* Update changelog and readme
+* Fix issue with dropdown field option validation
+* Add `status` to SearchConversation model
+
+#### 1.8.2 (June 13, 2016)
+* Fix the shuber/curl requirement
+
 #### 1.8.1 (June 13, 2016)
 * Fix issue with setting the value of a dropdown custom field
 * Fix bug in the `getCustomer` method for Webhook
