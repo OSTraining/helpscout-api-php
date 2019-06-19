@@ -54,7 +54,7 @@ final class ApiClient {
 	/**
 	 * Get all available service descriptions and
 	 * their configurations.
-	 * 
+	 *
 	 * @return array
 	 */
     public function getServiceDescriptions()
@@ -63,9 +63,9 @@ final class ApiClient {
     }
 
     /**
-     * Get the public API method names as described via 
+     * Get the public API method names as described via
      * a service description.
-     * 
+     *
      * @return array
      */
     public function getServiceDescriptionMethods()
@@ -187,6 +187,7 @@ final class ApiClient {
 	 * @param  integer $customerId
 	 * @param  array   $params
 	 * @param  array   $fields
+     *
 	 * @throws \HelpScout\ApiException
 	 * @return \HelpScout\Collection
 	 */
@@ -698,7 +699,7 @@ final class ApiClient {
 		$this->checkStatus($statusCode, $method);
 
 		$json = json_decode($json);
-		
+
 		if ($json) {
 			if (isset($params['fields']) || !$model) {
 				return $json->item;
@@ -938,7 +939,7 @@ final class ApiClient {
 		$this->checkStatus($response->headers['Status-Code'], 'POST', $expectedCode, $response->body);
 
 		return array(
-			array_key_exists('Location', $response->headers) 
+			array_key_exists('Location', $response->headers)
 				? $this->getIdFromLocation($response->headers['Location'])
 				: null,
 			$response->body
@@ -1046,7 +1047,7 @@ final class ApiClient {
 
 	/**
 	 * Call a service description if one is available.
-	 * 
+	 *
 	 * @param  string $method
 	 * @param  array $args
 	 * @return mixed
@@ -1069,7 +1070,7 @@ final class ApiClient {
      * Construct a call to be made to the API via a Service
      * Description. Do parameter checking. Call the appropriate
      * HTTP verb method (ie: `doGet`).
-     * 
+     *
      * @param  string $service
      * @param  array $params
      * @return stdObject|array
@@ -1105,9 +1106,9 @@ final class ApiClient {
     }
 
     /**
-     * Loop through all stated service description locations and 
+     * Loop through all stated service description locations and
      * load their configuration arrays into one merged array.
-     * 
+     *
      * @return array
      */
     private function loadServiceDescriptions()
